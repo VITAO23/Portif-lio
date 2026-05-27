@@ -1,14 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@300;400;500;600;700&display=swap');
+
 :root {
   color-scheme: dark;
-  --bg: #0b1020;
-  --bg-soft: rgba(14, 20, 38, 0.78);
-  --surface: rgba(17, 25, 46, 0.82);
-  --surface-strong: rgba(24, 34, 62, 0.95);
-  --text: #eef2ff;
-  --muted: #a8b0d3;
-  --accent: #8ce4ff;
-  --accent-strong: #4f9cff;
-  --border: rgba(255, 255, 255, 0.12);
+  --bg: #0b1019;
+  --bg-soft: #0f1624;
+  --surface: #111a2b;
+  --surface-strong: #151f32;
+  --text: #f1f3f8;
+  --muted: #a1aec6;
+  --accent: #7fd1ff;
+  --accent-strong: #3c8bff;
+  --border: rgba(255, 255, 255, 0.08);
   --shadow: 0 30px 90px rgba(0, 0, 0, 0.35);
 }
 
@@ -23,11 +25,11 @@ html {
 body {
   margin: 0;
   min-width: 320px;
-  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
   background:
-    radial-gradient(circle at top left, rgba(79, 156, 255, 0.3), transparent 30%),
-    radial-gradient(circle at top right, rgba(140, 228, 255, 0.16), transparent 25%),
-    linear-gradient(180deg, #050814 0%, var(--bg) 45%, #060916 100%);
+    radial-gradient(circle at 20% 15%, rgba(63, 139, 255, 0.22), transparent 35%),
+    radial-gradient(circle at 80% 10%, rgba(127, 209, 255, 0.15), transparent 35%),
+    linear-gradient(180deg, #0a0f18 0%, var(--bg) 55%, #0a0f18 100%);
   color: var(--text);
 }
 
@@ -56,16 +58,69 @@ a:hover {
 .portfolio-shell {
   width: min(1120px, calc(100% - 32px));
   margin: 0 auto;
-  padding: 32px 0 56px;
+  padding: 32px 0 64px;
+}
+
+.site-header {
+  width: min(1120px, calc(100% - 32px));
+  margin: 24px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  color: var(--text);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-mark {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.brand span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.site-nav a {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.site-nav .nav-cta {
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
 }
 
 .hero,
 .section,
 .contact-section {
-  /* border: 1px solid var(--border); */
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent), var(--bg-soft);
+  border: 1px solid var(--border);
+  background: var(--surface);
   box-shadow: var(--shadow);
-  backdrop-filter: blur(18px);
 }
 
 .hero {
@@ -83,11 +138,12 @@ a:hover {
   margin: 0;
   line-height: 1.02;
   letter-spacing: -0.04em;
+  font-family: 'Fraunces', 'Times New Roman', serif;
 }
 
 .hero-copy h1 {
-  max-width: 11ch;
-  /* font-size: clamp(3rem, 8vw, 6rem); */
+  max-width: 15ch;
+  font-size: clamp(2rem, 4.6vw, 3.4rem);
 }
 
 .hero-text,
@@ -136,7 +192,7 @@ a:hover {
 }
 
 .secondary-action {
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .highlights,
@@ -169,18 +225,39 @@ a:hover {
   gap: 20px;
   padding: 22px;
   border-radius: 28px;
-  background: linear-gradient(180deg, rgba(140, 228, 255, 0.16), rgba(255, 255, 255, 0.03));
-  border: 1px solid rgba(140, 228, 255, 0.18);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(127, 209, 255, 0.15);
 }
 
 .hero-card h2 {
-  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-size: clamp(1.3rem, 3.2vw, 2.2rem);
+}
+
+.hero-media {
+  display: grid;
+  place-items: center;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.hero-photo {
+  width: 100%;
+  max-width: 220px;
+  /* aspect-ratio: 4 / 5; */
+  /* object-fit: cover; */
+  border-radius: 16px;
+  border: 1px solid var(--border);
 }
 
 
-.project-image{
-    width: 100%;
-    border-radius: 18px;
+.project-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 1px solid var(--border);
 }
 
 .metrics {
@@ -192,7 +269,7 @@ a:hover {
 .metrics div {
   padding: 14px;
   border-radius: 20px;
-  background: rgba(7, 11, 23, 0.34);
+  background: rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -229,13 +306,44 @@ a:hover {
 .section-heading h2,
 .contact-copy h2 {
   font-size: clamp(1.8rem, 4vw, 3rem);
-  max-width: 14ch;
+  /* max-width: 14ch; */
 }
 
 .skill-grid,
 .project-grid {
   display: grid;
   gap: 14px;
+}
+
+.stack-grid,
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.stack-card,
+.principle-card {
+  padding: 20px;
+  border-radius: 22px;
+  border: 1px solid var(--border);
+  background: var(--surface-strong);
+}
+
+.stack-card h3,
+.principle-card h3 {
+  margin: 0 0 12px;
+  font-size: 1.1rem;
+}
+
+.stack-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 8px;
+  color: var(--muted);
 }
 
 .experience-list {
@@ -297,6 +405,20 @@ a:hover {
   margin-top: 18px;
 }
 
+.project-metrics {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 16px;
+}
+
+.project-link {
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.05);
+  font-weight: 600;
+}
+
 .experience-card ul {
   margin: 14px 0 0;
   padding-left: 18px;
@@ -313,8 +435,16 @@ a:hover {
 }
 
 .contact-list a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   color: var(--text);
   border-bottom: 1px solid transparent;
+}
+
+.contact-icon {
+  flex: 0 0 auto;
+  font-size: 1.1rem;
 }
 
 .contact-list a:hover {
@@ -326,11 +456,22 @@ a:hover {
 }
 
 @media (max-width: 900px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-nav {
+    gap: 12px;
+  }
+
   .hero,
   .about-section,
   .contact-section,
   .project-grid,
-  .experience-list {
+  .experience-list,
+  .stack-grid,
+  .principles-grid {
     grid-template-columns: 1fr;
   }
 
@@ -359,7 +500,7 @@ a:hover {
   }
 
   .hero-copy h1 {
-    font-size: clamp(2.4rem, 16vw, 4rem);
+    font-size: clamp(1.9rem, 9vw, 2.6rem);
   }
 
   .hero-actions {

@@ -173,8 +173,7 @@ a:hover {
 }
 
 .primary-action,
-.secondary-action,
-.contact-link {
+.secondary-action {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -185,8 +184,7 @@ a:hover {
   font-weight: 600;
 }
 
-.primary-action,
-.contact-link {
+.primary-action {
   background: linear-gradient(135deg, var(--accent-strong), var(--accent));
   color: #07111f;
 }
@@ -451,10 +449,6 @@ a:hover {
   border-color: var(--accent);
 }
 
-.contact-link {
-  min-width: 240px;
-}
-
 @media (max-width: 900px) {
   .site-header {
     flex-direction: column;
@@ -508,8 +502,7 @@ a:hover {
   }
 
   .primary-action,
-  .secondary-action,
-  .contact-link {
+  .secondary-action {
     width: 100%;
   }
 }

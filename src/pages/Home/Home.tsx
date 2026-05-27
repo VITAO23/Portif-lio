@@ -18,7 +18,7 @@ function Home() {
   const highlights = [
     'Santa Luzia - MG, Brasil',
     '24 anos',
-    'Cargo alvo: Desenvolvedor Full Stack',
+
   ]
 
   const stack = [
@@ -28,11 +28,11 @@ function Home() {
     },
     {
       title: 'Back-end e Infra',
-      items: ['Node.js', 'APIs REST', 'MySQL (nocoes)', 'Linux (PM2/Nginx)', 'SSL'],
+      items: ['Node.js', 'APIs REST', 'MySQL (noções)', 'Linux (PM2/Nginx)', 'SSL'],
     },
     {
       title: 'Entrega e qualidade',
-      items: ['Git', 'Documentacao tecnica', 'Scrum', 'Integrações com API'],
+      items: ['Git', 'Scrum', 'Integrações com API'],
     },
   ]
 
@@ -42,23 +42,9 @@ function Home() {
     'Curso JavaScript e TypeScript (Udemy)',
     'HTML, CSS e Bootstrap',
     'Curso de Enderecamento IPv4',
-    'Curso Pratico de Redes de Computadores e Internet',
+    'Curso Prático de Redes de Computadores e Internet',
   ]
 
-  const principles = [
-    {
-      title: 'Clareza acima de tudo',
-      description: 'Interfaces com hierarquia visual objetiva, leitura rapida e fluxo direto.',
-    },
-    {
-      title: 'Componentes consistentes',
-      description: 'Espacamento, tipografia e tons organizados para reduzir ruido visual.',
-    },
-    {
-      title: 'Entrega confiavel',
-      description: 'Codigo organizado e pronto para evoluir com novas demandas de negocio.',
-    },
-  ]
 
   const experiences = [
     {
@@ -67,21 +53,21 @@ function Home() {
       period: 'Mar/2023 - Atual',
       location: 'Belo Horizonte - MG',
       bullets: [
-        'Desenvolvimento e manutencao de sistemas web com React e Node.js.',
-        'Integracao de APIs REST e evolucao de funcionalidades conforme regra de negocio.',
-        'Deploy em Linux com PM2 e Nginx, incluindo configuracao e renovacao de SSL.',
-        'Versionamento com Git, colaboracao em rituais Scrum e criacao de documentacao tecnica.',
+        'Desenvolvimento e manutenção de sistemas web com React e Node.js.',
+        'Integração de APIs REST e evolução de funcionalidades conforme regra de negócio.',
+        'Deploy em Linux com PM2 e Nginx, incluindo configuração e renovação de SSL.',
+        'Versionamento com Git, colaboração em rituais Scrum e criação de documentação técnica.',
       ],
     },
     {
-      role: 'Estagiario em TI',
+      role: 'Estagiário em TI',
       company: 'CIEEMG',
       period: 'Ago/2022 - Mar/2023',
       location: 'Belo Horizonte - MG',
       bullets: [
-        'Suporte tecnico presencial e remoto para hardware e software.',
-        'Apoio em infraestrutura de rede, cabeamento e manutencao de estacoes.',
-        'Atualizacao e organizacao de inventario de equipamentos de TI.',
+        'Suporte técnico presencial e remoto para hardware e software.',
+        'Apoio em infraestrutura de rede, cabeamento e manutenção de estações.',
+        'Atualização e organização de inventário de equipamentos de TI.',
       ],
     },
     {
@@ -89,7 +75,7 @@ function Home() {
       company: 'Saude PASA',
       period: 'Nov/2021 - Set/2022',
       location: 'Rio de Janeiro - RJ',
-      bullets: ['Apoio em processos administrativos e organizacao de documentos.'],
+      bullets: ['Apoio em processos administrativos e organização de documentos.'],
     },
   ]
 
@@ -97,7 +83,7 @@ function Home() {
     {
       name: 'Cardapio SaaS Online',
       description:
-        'Aplicacao SaaS para restaurantes com painel administrativo em React + TypeScript e API REST com autenticacao JWT, CRUD completo de categorias/produtos, upload de imagens e geracao de QR Code para cardapio publico.',
+        'Aplicação SaaS para restaurantes com painel administrativo em React + TypeScript e API REST com autenticação JWT, CRUD completo de categorias/produtos, upload de imagens e geração de QR Code para cardápio público.',
       imageUrl: 'src/img/cardapio-online.png',
       liveUrl: 'https://sistema-de-cardapio-saas-re8mussd0-projetos-online.vercel.app/',
       tags: ['React', 'TypeScript', 'Node.js', 'Axios', 'React Hook Form + Zod', 'JWT'],
@@ -105,7 +91,15 @@ function Home() {
     {
       name: 'Landing Page de Agencia de Viagem',
       description:
-        'Projeto web para exibicao de destinos, passagens disponiveis e precos, com formulario de contato integrado ao banco para captura de leads e suporte ao fluxo comercial.',
+        'Projeto web para exibição de destinos, passagens disponíveis e preços, com formulário de contato integrado ao banco para captura de leads e suporte ao fluxo comercial.',
+      imageUrl: 'src/img/projeto-viagens.png',
+      liveUrl: 'https://site-viagem-o2vlkkesm-projetos-online.vercel.app/',
+      tags: ['HTML', 'CSS', 'JavaScript', 'PHP', 'phpMyAdmin'],
+    },
+    {
+      name: 'Landing Page de Agencia de Viagem',
+      description:
+        'Projeto web para exibição de destinos, passagens disponíveis e preços, com formulário de contato integrado ao banco para captura de leads e suporte ao fluxo comercial.',
       imageUrl: 'src/img/projeto-viagens.png',
       liveUrl: 'https://site-viagem-o2vlkkesm-projetos-online.vercel.app/',
       tags: ['HTML', 'CSS', 'JavaScript', 'PHP', 'phpMyAdmin'],
@@ -116,7 +110,7 @@ function Home() {
     <>
       <header className="site-header">
         <div className="brand">
-          <span className="brand-mark"><img src="src/img/foto my 1.jpeg" alt="Foto" /></span>
+          <span className="brand-mark"></span>
           <div>
             <strong>Victor Hugo</strong>
             <span>Full Stack</span>
@@ -126,188 +120,186 @@ function Home() {
           <a href="#sobre">Sobre</a>
           <a href="#stack">Stack</a>
           <a href="#projetos">Projetos</a>
-          <a href="#experiencia">Experiencia</a>
+          <a href="#experiencia">Experiência</a>
           <a href="#contato" className="nav-cta">Contato</a>
         </nav>
       </header>
 
       <main className="portfolio-shell">
-      <section className="hero">
-        <div className="hero-copy">
-          <p className="eyebrow">Victor Hugo Nunes Oliveira</p>
-          <h1>Desenvolvedor Full Stack focado em produto, codigo limpo e entrega.</h1>
-          <p className="hero-text">
-            Formado em Sistemas de Informacao, com experiencia em JavaScript, React e Node.js. Atuo com integracao de APIs, deploy em Linux e manutencao de sistemas em producao.
-          </p>
-          <div className="hero-actions">
-            <a href="#projetos" className="primary-action">Ver projetos</a>
-            <a href="#contato" className="secondary-action">Falar comigo</a>
-          </div>
-          <ul className="highlights">
-            {highlights.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-        </div>
-
-        <aside className="hero-card">
-          <div className="hero-media">
-            <img
-              className="hero-photo"
-              src="src/img/image.png"
-              alt="Foto de Victor Hugo"
-            />
-          </div>
-          <p className="card-label">Posicionamento</p>
-          <h2>Desenvolvedor Full Stack</h2>
-          <div className="metrics">
-            <div>
-              <strong>3+ anos</strong>
-              <span>experiencia em tecnologia</span>
+        <section className="hero">
+          <div className="hero-copy">
+            <p className="eyebrow">Victor Hugo Nunes Oliveira</p>
+            <h1>Desenvolvedor Full Stack focado em produto, código limpo e entrega.</h1>
+            <p className="hero-text">
+              Formado em Sistemas de Informação, com experiência em JavaScript, React e Node.js. Atuo com integração de APIs, deploy em Linux e manutenção de sistemas em produção.
+            </p>
+            <div className="hero-actions">
+              <a href="#projetos" className="primary-action">Ver projetos</a>
+              <a href="#contato" className="secondary-action">Falar comigo</a>
+              <a href="/Curriculo_Victor_Hugo-dev.pdf" target="_blank" rel="noopener noreferrer" className="secondary-action">Abrir CV</a>
+              <a href="/Curriculo_Victor_Hugo-dev.pdf" download="Curriculo_Victor_Hugo-dev.pdf" className="secondary-action">Download CV</a>
             </div>
-            <div>
-              <strong>Estacio</strong>
-              <span>Sistemas de Informacao (12/2025)</span>
-            </div>
-            <div>
-              <strong>React + Node</strong>
-              <span>stack principal de atuacao</span>
-            </div>
+            <ul className="highlights">
+              {highlights.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
           </div>
-        </aside>
-      </section>
 
-      <section className="section about-section" id="sobre">
-        <div>
-          <p className="section-label">Resumo profissional</p>
-          <h2>Experiencia pratica com produto, codigo e operacao em producao.</h2>
-        </div>
-        <p>
-          Atuo no desenvolvimento e manutencao de sistemas web com integracao de APIs REST, versionamento com Git e publicacao em servidores Linux com PM2 e Nginx. Tenho perfil organizado, colaborativo e orientado a resultado, com foco em transformacao digital e trabalho em equipe.
-        </p>
-      </section>
-
-      <section className="section stack-section" id="stack" aria-labelledby="stack-title">
-        <div className="section-heading">
-          <p className="section-label">Stack</p>
-          <h2 id="stack-title">Tecnologias organizadas por contexto de uso.</h2>
-        </div>
-        <div className="stack-grid">
-          {stack.map((group) => (
-            <article key={group.title} className="stack-card">
-              <h3>{group.title}</h3>
-              <ul>
-                {group.items.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="section projects-section" id="projetos">
-        <div className="section-heading">
-          <p className="section-label">Projetos pessoais</p>
-          <h2>Projetos reais para validar arquitetura, produto e entrega.</h2>
-        </div>
-        <div className="project-grid">
-          {projects.map((project) => (
-            <article key={project.name} className="project-card">
-              <p className="project-kicker">Projeto em destaque</p>
-              <h3>{project.name}</h3>
-              <img className="project-image" src={project.imageUrl} alt={`Preview do projeto ${project.name}`} loading="lazy" />
-              <p>{project.description}</p>
-              <ul>
-                {project.tags.map((tag) => (
-                  <li key={tag}>{tag}</li>
-                ))}
-              </ul>
-              <div className="project-metrics">
-                <a className="project-link" href={project.liveUrl} target="_blank" rel="noreferrer">Acessar projeto</a>
+          <aside className="hero-card">
+            <div className="hero-media">
+              <img className="hero-photo" src="src/img/image.png" alt="Foto de Victor Hugo" />
+            </div>
+            <p className="card-label">Posicionamento</p>
+            <h2>Desenvolvedor Full Stack</h2>
+            <div className="metrics">
+              <div>
+                <strong>2+ anos</strong>
+                <span>experiência em tecnologia</span>
               </div>
-            </article>
-          ))}
-        </div>
-      </section>
+              <div>
+                <strong>Estácio</strong>
+                <span>Sistemas de Informação (12/2025)</span>
+              </div>
+              <div>
+                <strong>React + Node</strong>
+                <span>stack principal de atuação</span>
+              </div>
+            </div>
+          </aside>
+        </section>
 
-      <section className="section experience-section" id="experiencia">
-        <div className="section-heading">
-          <p className="section-label">Experiencia profissional</p>
-          <h2>Historico de atuacao com desenvolvimento e suporte.</h2>
-        </div>
+        <section className="section about-section" id="sobre">
+          <div>
+            <p className="section-label">Resumo profissional</p>
+            <h2>Experiência prática com produto, código e operação em produção.</h2>
+          </div>
+          <p>
+            Atuo no desenvolvimento e manutenção de sistemas web com integração de APIs REST, versionamento com Git e publicação em servidores Linux com PM2 e Nginx. Tenho perfil organizado, colaborativo e orientado a resultado, com foco em transformação digital e trabalho em equipe.
+          </p>
+        </section>
 
-        <div className="experience-list">
-          {experiences.map((job) => (
-            <article className="experience-card" key={`${job.company}-${job.period}`}>
-              <p className="project-kicker">{job.period}</p>
-              <h3>{job.role}</h3>
-              <p className="experience-meta">{job.company} | {job.location}</p>
-              <ul>
-                {job.bullets.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </article>
-          ))}
-        </div>
-      </section>
+        <section className="section stack-section" id="stack" aria-labelledby="stack-title">
+          <div className="section-heading">
+            <p className="section-label">Stack</p>
+            <h2 id="stack-title">Tecnologias organizadas por contexto de uso.</h2>
+          </div>
+          <div className="stack-grid">
+            {stack.map((group) => (
+              <article key={group.title} className="stack-card">
+                <h3>{group.title}</h3>
+                <ul>
+                  {group.items.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
+        </section>
 
-      <section className="section principles-section">
-        <div className="section-heading">
-          <p className="section-label">Design system</p>
-          <h2>Principios que uso para manter consistencia e credibilidade.</h2>
-        </div>
-        <div className="principles-grid">
-          {principles.map((principle) => (
-            <article key={principle.title} className="principle-card">
-              <h3>{principle.title}</h3>
-              <p>{principle.description}</p>
-            </article>
-          ))}
-        </div>
-      </section>
+        <section className="section projects-section" id="projetos">
+          <div className="section-heading">
+            <p className="section-label">Projetos pessoais</p>
+            {/* <h2>Projetos reais para validar arquitetura, produto e entrega.</h2> */}
+          </div>
+          <div className="project-grid">
+            {projects.map((project) => (
+              <article key={project.name} className="project-card">
+                <p className="project-kicker">Projeto em destaque</p>
+                <h3>{project.name}</h3>
+                <img className="project-image" src={project.imageUrl} alt={`Preview do projeto ${project.name}`} loading="lazy" />
+                <p>{project.description}</p>
+                <ul>
+                  {project.tags.map((tag) => (
+                    <li key={tag}>{tag}</li>
+                  ))}
+                </ul>
+                <div className="project-metrics">
+                  <a className="project-link" href={project.liveUrl} target="_blank" rel="noreferrer">Acessar projeto</a>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
 
-      <section className="section skills-section" aria-labelledby="courses-title">
-        <div className="section-heading">
-          <p className="section-label">Cursos e certificacoes</p>
-          <h2 id="courses-title">Formacao complementar em desenvolvimento e redes.</h2>
-        </div>
-        <div className="skill-grid">
-          {certifications.map((course) => (
-            <span key={course} className="skill-pill">{course}</span>
-          ))}
-        </div>
-      </section>
+        <section className="section experience-section" id="experiencia">
+          <div className="section-heading">
+            <p className="section-label">Experiência profissional</p>
+            <h2>Histórico de atuação com desenvolvimento e suporte.</h2>
+          </div>
 
-      <section className="section contact-section" id="contato">
-        <div className="contact-copy">
-          <p className="section-label">Contato</p>
-          <ul className="contact-list">
-            <li>
-              <a href="mailto:victorhugonunesoliveira2002@gmail.com">
-                victorhugonunesoliveira2002@gmail.com
-              </a>
-            </li>
-            <li>
-              <a href="tel:+5531985592981">(31) 98559-2981</a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/victor-hugo-28613422" target="_blank" rel="noreferrer">
-                <LinkedInIcon />
-                LinkedIn
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/VITAO23" target="_blank" rel="noreferrer">
-                <GithubIcon />
-                GitHub
-              </a>
-            </li>
-          </ul>
-        </div>
-        <a className="contact-link" href="mailto:victorhugonunesoliveira2002@gmail.com">Enviar e-mail</a>
-      </section>
+          <div className="experience-list">
+            {experiences.map((job) => (
+              <article className="experience-card" key={`${job.company}-${job.period}`}>
+                <p className="project-kicker">{job.period}</p>
+                <h3>{job.role}</h3>
+                <p className="experience-meta">{job.company} | {job.location}</p>
+                <ul>
+                  {job.bullets.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        {/* <section className="section principles-section">
+          <div className="section-heading">
+            <p className="section-label">Design system</p>
+            <h2>Princípios que uso para manter consistência e credibilidade.</h2>
+          </div>
+          <div className="principles-grid">
+            {principles.map((principle) => (
+              <article key={principle.title} className="principle-card">
+                <h3>{principle.title}</h3>
+                <p>{principle.description}</p>
+              </article>
+            ))}
+          </div>
+        </section> */}
+
+        <section className="section skills-section" aria-labelledby="courses-title">
+          <div className="section-heading">
+            <p className="section-label">Cursos e certificações</p>
+            <h2 id="courses-title">Formação complementar em desenvolvimento e redes.</h2>
+          </div>
+          <div className="skill-grid">
+            {certifications.map((course) => (
+              <span key={course} className="skill-pill">{course}</span>
+            ))}
+          </div>
+        </section>
+
+        <section className="section contact-section" id="contato">
+          <div className="contact-copy">
+            <p className="section-label">Contato</p>
+            <ul className="contact-list">
+              <li>
+                <a href="mailto:victorhugonunesoliveira2002@gmail.com">
+                  victorhugonunesoliveira2002@gmail.com
+                </a>
+              </li>
+              <li>
+                <a href="tel:+5531985592981">(31) 98559-2981</a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/victor-hugo-286134221/" target="_blank" rel="noreferrer">
+                  <LinkedInIcon />
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/VITAO23" target="_blank" rel="noreferrer">
+                  <GithubIcon />
+                  GitHub
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </section>
       </main>
     </>
   )

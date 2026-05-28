@@ -207,7 +207,7 @@ a:hover {
   gap: 10px;
 }
 
-.highlights li,
+
 .skill-pill,
 .project-card ul li {
   border: 1px solid var(--border);
@@ -447,6 +447,15 @@ a:hover {
 
 .contact-list a:hover {
   border-color: var(--accent);
+}
+
+.contact-list li .link-icon{
+  background: aqua;
+    /* background-color: aliceblue; */
+    color: aquamarine;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 8px;
 }
 
 @media (max-width: 900px) {

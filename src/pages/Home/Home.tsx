@@ -16,8 +16,8 @@ function GithubIcon() {
 
 function Home() {
   const highlights = [
-    'Santa Luzia - MG, Brasil',
-    '24 anos',
+    'Santa Luzia - MG, Brasil.',
+    'Idade: 24 anos',
 
   ]
 
@@ -139,11 +139,7 @@ function Home() {
               <a href="/Curriculo_Victor_Hugo-dev.pdf" target="_blank" rel="noopener noreferrer" className="secondary-action">Abrir CV</a>
               <a href="/Curriculo_Victor_Hugo-dev.pdf" download="Curriculo_Victor_Hugo-dev.pdf" className="secondary-action">Download CV</a>
             </div>
-            <ul className="highlights">
-              {highlights.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
+
           </div>
 
           <aside className="hero-card">
@@ -151,6 +147,11 @@ function Home() {
               <img className="hero-photo" src="/images/foto-my-2.jpeg" alt="Foto de Victor Hugo" />
             </div>
             <p className="card-label">Posicionamento</p>
+            <ul className="highlights">
+              {highlights.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
             <h2>Desenvolvedor Full Stack</h2>
             <div className="metrics">
               <div>
@@ -282,16 +283,16 @@ function Home() {
                 </a>
               </li>
               <li>
-                <a href="tel:+5531985592981">(31) 98559-2981</a>
+                <a  href="tel:+5531985592981">(31) 98559-2981</a>
               </li>
               <li>
-                <a href="https://www.linkedin.com/in/victor-hugo-286134221/" target="_blank" rel="noreferrer">
+                <a className="link-icon" href="https://www.linkedin.com/in/victor-hugo-286134221/" target="_blank" rel="noreferrer">
                   <LinkedInIcon />
                   LinkedIn
                 </a>
               </li>
               <li>
-                <a href="https://github.com/VITAO23" target="_blank" rel="noreferrer">
+                <a className="link-icon" href="https://github.com/VITAO23" target="_blank" rel="noreferrer">
                   <GithubIcon />
                   GitHub
                 </a>

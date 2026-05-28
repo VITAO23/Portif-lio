@@ -84,7 +84,7 @@ function Home() {
       name: 'Cardapio SaaS Online',
       description:
         'Aplicação SaaS para restaurantes com painel administrativo em React + TypeScript e API REST com autenticação JWT, CRUD completo de categorias/produtos, upload de imagens e geração de QR Code para cardápio público.',
-      imageUrl: 'src/img/cardapio-online.png',
+      imageUrl: './img/cardapio-online.png',
       liveUrl: 'https://sistema-de-cardapio-saas-re8mussd0-projetos-online.vercel.app/',
       tags: ['React', 'TypeScript', 'Node.js', 'Axios', 'React Hook Form + Zod', 'JWT'],
     },
@@ -92,7 +92,7 @@ function Home() {
       name: 'Landing Page de Agencia de Viagem',
       description:
         'Projeto web para exibição de destinos, passagens disponíveis e preços, com formulário de contato integrado ao banco para captura de leads e suporte ao fluxo comercial.',
-      imageUrl: 'src/img/projeto-viagens.png',
+      imageUrl: './img/projeto-viagens.png',
       liveUrl: 'https://site-viagem-o2vlkkesm-projetos-online.vercel.app/',
       tags: ['HTML', 'CSS', 'JavaScript', 'PHP', 'phpMyAdmin'],
     },
@@ -100,7 +100,7 @@ function Home() {
       name: 'Landing Page de Agencia de Viagem',
       description:
         'Projeto web para exibição de destinos, passagens disponíveis e preços, com formulário de contato integrado ao banco para captura de leads e suporte ao fluxo comercial.',
-      imageUrl: 'src/img/projeto-viagens.png',
+      imageUrl: './img/projeto-viagens.png',
       liveUrl: 'https://site-viagem-o2vlkkesm-projetos-online.vercel.app/',
       tags: ['HTML', 'CSS', 'JavaScript', 'PHP', 'phpMyAdmin'],
     },
@@ -148,7 +148,7 @@ function Home() {
 
           <aside className="hero-card">
             <div className="hero-media">
-              <img className="hero-photo" src="src/img/image.png" alt="Foto de Victor Hugo" />
+              <img className="hero-photo" src="./img/image.png" alt="Foto de Victor Hugo" />
             </div>
             <p className="card-label">Posicionamento</p>
             <h2>Desenvolvedor Full Stack</h2>

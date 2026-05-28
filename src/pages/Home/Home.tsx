@@ -1,3 +1,5 @@
+import { Analytics } from "@vercel/analytics/next"
+
 function LinkedInIcon() {
   return (
     <svg className="contact-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -301,6 +303,7 @@ function Home() {
           </div>
         </section>
       </main>
+      <Analytics />
     </>
   )
 }

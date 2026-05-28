@@ -1,4 +1,4 @@
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/react"
 
 function LinkedInIcon() {
   return (
@@ -302,8 +302,8 @@ function Home() {
             </ul>
           </div>
         </section>
+        <Analytics />
       </main>
-      <Analytics />
     </>
   )
 }

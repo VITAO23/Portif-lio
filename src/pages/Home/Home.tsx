@@ -110,7 +110,7 @@ function Home() {
     <>
       <header className="site-header">
         <div className="brand">
-          <span className="brand-mark">vh<img src="/profile.png" alt="Foto" /></span>
+          <span className="brand-mark" ><img src="/images/foto-my-2.jpeg" alt="Foto" /></span>
           <div>
             <strong>Victor Hugo</strong>
             <span>Full Stack</span>

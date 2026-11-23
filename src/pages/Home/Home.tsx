@@ -38,12 +38,19 @@ const education = [
   'Curso Node.js',
   'Curso JavaScript Completo',
   'HTML, CSS e Bootstrap',
-  'Redes de Computadores e Endereçamento IPv4',
 ]
 
-const experiences = [
+const experiences: {
+  role: string
+  note?: string
+  company: string
+  period: string
+  location: string
+  bullets: string[]
+}[] = [
   {
-    role: 'Desenvolvedor Full Stack',
+    role: 'Atuação em Desenvolvimento Full Stack',
+    note: 'Cargo formal: Analista de Suporte TI 2, com atividades exercidas em desenvolvimento de software.',
     company: 'CIEEMG',
     period: 'Mar 2023 — atual',
     location: 'Belo Horizonte, MG',
@@ -180,8 +187,9 @@ function Home() {
             <div className="intro-body">
               <p className="lead">
                 Desenvolvedor Full Stack com mais de 3 anos de experiência em React, Node.js,
-                TypeScript e APIs REST. Atuo em sistemas corporativos, integração de serviços,
-                segurança e entrega de aplicações em produção.
+                TypeScript e APIs REST. Atuo no desenvolvimento de sistemas corporativos, integrações,
+                segurança e sustentação de aplicações em produção, além de colaborar com revisões de
+                código e decisões técnicas da equipe.
               </p>
 
               <dl className="facts">
@@ -269,6 +277,7 @@ function Home() {
                 <div>
                   <h3>{job.role}</h3>
                   <p className="job-meta">{job.company} · {job.location}</p>
+                  {job.note && <p className="job-note">{job.note}</p>}
                   <ul>
                     {job.bullets.map((item) => (
                       <li key={item}>{item}</li>

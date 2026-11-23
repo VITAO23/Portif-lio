@@ -4,34 +4,41 @@ import type { Shot } from "../../components/ProjectCarousel"
 
 const facts = [
   { label: 'Local', value: 'Santa Luzia — MG' },
-  { label: 'Idade', value: '24 anos' },
+  { label: 'Experiência', value: '3+ anos em desenvolvimento' },
   { label: 'Formação', value: 'Sistemas de Informação, Estácio (12/2025)' },
-  { label: 'Experiência', value: '4+ anos em tecnologia' },
-  { label: 'Stack principal', value: 'React + Node.js' },
+  { label: 'Stack principal', value: 'React, Node.js e TypeScript' },
 ]
 
 const stack = [
   {
     title: 'Front-end',
-    items: ['JavaScript', 'TypeScript', 'React', 'Vite', 'React Hook Form + Zod'],
+    items: ['React', 'TypeScript', 'JavaScript', 'Vite', 'HTML e CSS', 'React Hook Form + Zod'],
   },
   {
-    title: 'Back-end e infra',
-    items: ['Node.js', 'APIs REST', 'MySQL (noções)', 'Linux (PM2/Nginx)', 'SSL'],
+    title: 'Back-end',
+    items: ['Node.js', 'Express', 'APIs REST', 'JWT', 'Sequelize'],
   },
   {
-    title: 'Entrega e qualidade',
-    items: ['Git', 'Scrum', 'Integrações com API'],
+    title: 'Banco de dados',
+    items: ['MySQL (via Sequelize)', 'Redis', 'Supabase'],
+  },
+  {
+    title: 'DevOps e entrega',
+    items: ['Linux', 'Nginx', 'PM2', 'SSL', 'GitHub Actions (CI/CD)', 'Git'],
+  },
+  {
+    title: 'Qualidade e segurança',
+    items: ['Code review', 'Swagger', 'Postman', 'Validação de dados', 'Scrum'],
   },
 ]
 
-const certifications = [
+const education = [
+  'Bacharelado em Sistemas de Informação — Estácio (12/2025)',
+  'Curso JavaScript e TypeScript (Udemy)',
   'Curso Node.js',
   'Curso JavaScript Completo',
-  'Curso JavaScript e TypeScript (Udemy)',
   'HTML, CSS e Bootstrap',
-  'Curso de Endereçamento IPv4',
-  'Curso Prático de Redes de Computadores e Internet',
+  'Redes de Computadores e Endereçamento IPv4',
 ]
 
 const experiences = [
@@ -41,10 +48,12 @@ const experiences = [
     period: 'Mar 2023 — atual',
     location: 'Belo Horizonte, MG',
     bullets: [
-      'Desenvolvimento e manutenção de sistemas web com React e Node.js.',
-      'Integração de APIs REST e evolução de funcionalidades conforme regra de negócio.',
-      'Deploy em Linux com PM2 e Nginx, incluindo configuração e renovação de SSL.',
-      'Versionamento com Git, colaboração em rituais Scrum e criação de documentação técnica.',
+      'Desenvolvimento e manutenção de sistemas corporativos com React, Node.js, TypeScript, Express e MySQL.',
+      'Criação de APIs REST, integrações entre serviços, autenticação JWT e implementação de regras de negócio.',
+      'Apoio técnico à equipe de desenvolvimento: revisão de código, organização de demandas e definição de boas práticas.',
+      'Investigação e resolução de incidentes em produção, análise de logs e melhorias de segurança.',
+      'Implantação e sustentação de aplicações em Linux com Nginx, PM2 e certificados SSL.',
+      'Implementação e manutenção de pipelines de CI/CD com GitHub Actions.',
     ],
   },
   {
@@ -67,19 +76,30 @@ const experiences = [
   },
 ]
 
-const projects: {
+type Project = {
   name: string
+  status?: string
   description: string
+  highlights: string[]
   images: Shot[]
   liveUrl: string
+  repoUrl?: string
   tags: string[]
-  status?: string
-}[] = [
+}
+
+const projects: Project[] = [
   {
     name: 'Tá Confirmado',
     status: 'Em produção',
     description:
-      'Plataforma de convites online e confirmação de presença (RSVP). O organizador cria o evento, compartilha um link pelo WhatsApp e acompanha em um painel quem confirmou, quantos acompanhantes vêm e exporta a lista — sem que os convidados precisem criar conta.',
+      'Plataforma de convites online e confirmação de presença (RSVP). O organizador cria o evento, compartilha um link pelo WhatsApp e acompanha em um painel quem confirmou e quantos acompanhantes vêm — sem que os convidados precisem criar conta.',
+    highlights: [
+      'Autenticação de organizadores e isolamento dos dados de cada evento no Supabase.',
+      'Confirmação pública sem login, protegida contra bots com Cloudflare Turnstile.',
+      'Controle de acompanhantes e indicadores do evento (respostas, ausências, pessoas esperadas).',
+      'Painel com busca, filtro por presença, paginação, correção de respostas e exportação em CSV.',
+      'Contato e nomes de acompanhantes ficam visíveis só para o organizador.',
+    ],
     images: [
       { src: '/images/taconfirmado.png', caption: 'Página inicial' },
       { src: '/images/taconfirmado-painel.png', caption: 'Painel do organizador com a lista de convidados' },
@@ -87,12 +107,18 @@ const projects: {
       { src: '/images/taconfirmado-cadastro.png', caption: 'Cadastro do organizador' },
     ],
     liveUrl: 'https://taconfirmado.app.br/',
-    tags: ['React', 'node.js', 'Vite', 'Supabase', 'Zod', 'Vercel'],
+    tags: ['React', 'Node.js', 'Vite', 'Supabase', 'Zod', 'Vercel'],
   },
   {
     name: 'Cardápio SaaS Online',
     description:
-      'Aplicação SaaS para restaurantes com painel administrativo em React + TypeScript e API REST com autenticação JWT, CRUD completo de categorias/produtos, upload de imagens e geração de QR Code para cardápio público.',
+      'Aplicação SaaS para restaurantes: painel administrativo para gerenciar o cardápio e uma página pública acessada pelo cliente via QR Code.',
+    highlights: [
+      'API REST em Node.js com autenticação JWT protegendo as rotas do painel.',
+      'CRUD completo de categorias e produtos, com upload de imagens.',
+      'Formulários validados no front-end com React Hook Form + Zod.',
+      'Geração de QR Code que leva ao cardápio público do restaurante.',
+    ],
     images: [{ src: '/images/cardapio-online.png', caption: 'Tela de login do painel' }],
     liveUrl: 'https://sistema-de-cardapio-saas-re8mussd0-projetos-online.vercel.app/',
     tags: ['React', 'TypeScript', 'Node.js', 'Axios', 'React Hook Form + Zod', 'JWT'],
@@ -100,7 +126,10 @@ const projects: {
   {
     name: 'Landing page de agência de viagem',
     description:
-      'Projeto web para exibição de destinos, passagens disponíveis e preços, com formulário de contato integrado ao banco para captura de leads e suporte ao fluxo comercial.',
+      'Site para exibição de destinos, passagens disponíveis e preços, com formulário de contato integrado ao banco de dados.',
+    highlights: [
+      'Formulário de contato que grava os leads no banco via PHP, apoiando o fluxo comercial.',
+    ],
     images: [{ src: '/images/projeto-viagens.png', caption: 'Página inicial' }],
     liveUrl: 'https://site-viagem-o2vlkkesm-projetos-online.vercel.app/',
     tags: ['HTML', 'CSS', 'JavaScript', 'PHP', 'phpMyAdmin'],
@@ -142,7 +171,7 @@ function Home() {
         <section className="intro">
           <p className="intro-meta">Victor Hugo Nunes Oliveira · Desenvolvedor Full Stack</p>
           <h1>
-            Construo sistemas web de ponta a ponta — da interface em React ao deploy no servidor Linux.
+            Desenvolvo soluções Full Stack, da arquitetura à produção.
           </h1>
 
           <div className="intro-grid">
@@ -150,8 +179,9 @@ function Home() {
 
             <div className="intro-body">
               <p className="lead">
-                Formado em Sistemas de Informação, com experiência em JavaScript, React e Node.js.
-                Atuo com integração de APIs, deploy em Linux e manutenção de sistemas em produção.
+                Desenvolvedor Full Stack com mais de 3 anos de experiência em React, Node.js,
+                TypeScript e APIs REST. Atuo em sistemas corporativos, integração de serviços,
+                segurança e entrega de aplicações em produção.
               </p>
 
               <dl className="facts">
@@ -165,7 +195,7 @@ function Home() {
 
               <div className="intro-actions">
                 <a href="#projetos" className="btn btn-solid">Ver projetos</a>
-                <a href="/Curriculo_Victor_Hugo-dev.pdf" target="_blank" rel="noopener noreferrer" className="btn">
+                <a href="/Curriculo_Victor_Hugo_Nunes_Oliveira_Full_Stack.pdf" target="_blank" rel="noopener noreferrer" className="btn">
                   Currículo (PDF)
                 </a>
               </div>
@@ -212,7 +242,18 @@ function Home() {
                     </a>
                   </h3>
                   <p>{project.description}</p>
+                  <ul className="project-highlights">
+                    {project.highlights.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
                   <p className="tags">{project.tags.join(' · ')}</p>
+                  <p className="project-links">
+                    <a href={project.liveUrl} target="_blank" rel="noreferrer">Ver online ↗</a>
+                    {project.repoUrl && (
+                      <a href={project.repoUrl} target="_blank" rel="noreferrer">Código ↗</a>
+                    )}
+                  </p>
                 </div>
               </article>
             ))}
@@ -240,10 +281,10 @@ function Home() {
         </section>
 
         <section className="section">
-          <SectionHead index="04" title="Cursos" />
+          <SectionHead index="04" title="Formação" />
           <div className="section-body">
             <ol className="courses">
-              {certifications.map((course) => (
+              {education.map((course) => (
                 <li key={course}>{course}</li>
               ))}
             </ol>

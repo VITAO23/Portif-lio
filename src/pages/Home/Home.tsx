@@ -1,4 +1,6 @@
 import { Analytics } from "@vercel/analytics/react"
+import ProjectCarousel from "../../components/ProjectCarousel"
+import type { Shot } from "../../components/ProjectCarousel"
 
 const facts = [
   { label: 'Local', value: 'Santa Luzia — MG' },
@@ -65,12 +67,33 @@ const experiences = [
   },
 ]
 
-const projects = [
+const projects: {
+  name: string
+  description: string
+  images: Shot[]
+  liveUrl: string
+  tags: string[]
+  status?: string
+}[] = [
+  {
+    name: 'Tá Confirmado',
+    status: 'Em produção',
+    description:
+      'Plataforma de convites online e confirmação de presença (RSVP). O organizador cria o evento, compartilha um link pelo WhatsApp e acompanha em um painel quem confirmou, quantos acompanhantes vêm e exporta a lista — sem que os convidados precisem criar conta.',
+    images: [
+      { src: '/images/taconfirmado.png', caption: 'Página inicial' },
+      { src: '/images/taconfirmado-painel.png', caption: 'Painel do organizador com a lista de convidados' },
+      { src: '/images/taconfirmado-convite.png', caption: 'Convite público com confirmação de presença' },
+      { src: '/images/taconfirmado-cadastro.png', caption: 'Cadastro do organizador' },
+    ],
+    liveUrl: 'https://taconfirmado.app.br/',
+    tags: ['React', 'node.js', 'Vite', 'Supabase', 'Zod', 'Vercel'],
+  },
   {
     name: 'Cardápio SaaS Online',
     description:
       'Aplicação SaaS para restaurantes com painel administrativo em React + TypeScript e API REST com autenticação JWT, CRUD completo de categorias/produtos, upload de imagens e geração de QR Code para cardápio público.',
-    imageUrl: '/images/cardapio-online.png',
+    images: [{ src: '/images/cardapio-online.png', caption: 'Tela de login do painel' }],
     liveUrl: 'https://sistema-de-cardapio-saas-re8mussd0-projetos-online.vercel.app/',
     tags: ['React', 'TypeScript', 'Node.js', 'Axios', 'React Hook Form + Zod', 'JWT'],
   },
@@ -78,7 +101,7 @@ const projects = [
     name: 'Landing page de agência de viagem',
     description:
       'Projeto web para exibição de destinos, passagens disponíveis e preços, com formulário de contato integrado ao banco para captura de leads e suporte ao fluxo comercial.',
-    imageUrl: '/images/projeto-viagens.png',
+    images: [{ src: '/images/projeto-viagens.png', caption: 'Página inicial' }],
     liveUrl: 'https://site-viagem-o2vlkkesm-projetos-online.vercel.app/',
     tags: ['HTML', 'CSS', 'JavaScript', 'PHP', 'phpMyAdmin'],
   },
@@ -180,10 +203,9 @@ function Home() {
           <div className="section-body">
             {projects.map((project) => (
               <article key={project.name} className="project">
-                <a href={project.liveUrl} target="_blank" rel="noreferrer" className="project-shot">
-                  <img src={project.imageUrl} alt={`Tela do projeto ${project.name}`} loading="lazy" />
-                </a>
+                <ProjectCarousel shots={project.images} projectName={project.name} />
                 <div className="project-info">
+                  {project.status && <p className="project-status">{project.status}</p>}
                   <h3>
                     <a href={project.liveUrl} target="_blank" rel="noreferrer">
                       {project.name} <span aria-hidden="true">↗</span>

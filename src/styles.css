@@ -301,23 +301,111 @@ img {
   padding-bottom: 0;
 }
 
-.project-shot {
-  display: block;
-  overflow: hidden;
+/* Carousel */
+
+.carousel {
+  align-self: start;
+  min-width: 0;
+}
+
+.carousel-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
   background: var(--paper-2);
   border: 1px solid var(--rule);
 }
 
-.project-shot img {
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+  margin: 0;
+  scroll-snap-align: start;
+}
+
+.carousel-slide img {
   width: 100%;
   aspect-ratio: 16 / 10;
   object-fit: cover;
-  object-position: top;
-  transition: transform 400ms ease;
+  object-position: top center;
+  user-select: none;
 }
 
-.project-shot:hover img {
-  transform: scale(1.03);
+.carousel-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.carousel-caption {
+  margin: 0;
+  min-width: 0;
+  font-size: 0.85rem;
+  color: var(--ink-2);
+}
+
+.carousel-caption span {
+  margin-right: 10px;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--accent);
+}
+
+.carousel-controls {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.carousel-controls button {
+  width: 40px;
+  height: 36px;
+  border: 1.5px solid var(--ink);
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 150ms, color 150ms;
+}
+
+.carousel-controls button + button {
+  border-left: 0;
+}
+
+.carousel-controls button:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+.project-info .project-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 10px;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--ink);
+}
+
+.project-status::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #2f9e5b;
+  box-shadow: 0 0 0 3px color-mix(in srgb, #2f9e5b 22%, transparent);
 }
 
 .project-info h3 {
